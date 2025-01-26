@@ -1,0 +1,41 @@
+{% extends 'basis/main.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<style>
+    a>.nav_button.projects{
+        background-color: #ffce8a;
+        pointer-events: none;
+        .text{
+            color: #1e2233;
+        }
+    }
+    .last_link{
+        float: right;
+    }
+</style>
+
+
+<div class="intro dark" style="padding-bottom: 0.5rem;">
+    <a href="{% url 'feed' %}" class="preview_links highlights">{% trans "Back to Projects" %}</a>
+    <h1 class="title">{{post.title}}</h1>
+    <h2 class="subtitle">{{post.sub_title}}</h2>
+</div>
+
+<div class="post">
+    <div class="wallpaper">
+        {% for i in repeat %}
+            {% include 'small_icons.html' %}
+        {% endfor %}
+    </div>
+    <div class="post_holder light">
+        <div class="post_content">
+            <img class="post_img" src="{{post.thumbnail.url}}">
+            <p class="text">{{post.body|safe|linebreaksbr}}</p>
+            <a href="{% url 'feed' %}" class="preview_links highlights last_link">{% trans "Back to Projects" %}</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
