@@ -9,8 +9,12 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 
 import os
 
+from whitenoise import WhiteNoise
+from .settings import env
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'biangelis.settings')
 
 application = get_wsgi_application()
+application = WhiteNoise(application, root=env("STATIC_HOST"))
+application.add_files("static/", prefix="static/")
