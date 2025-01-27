@@ -1,6 +1,5 @@
 {% extends 'main.html' %}
 {% load static %}
-{% load i18n %}
 
 {% block content %}
 <style>
@@ -21,58 +20,6 @@
 </style>
 
 <div class="intro light content_block">
-    <div class="content_holder">
-        {% get_current_language as current_language %}
-        <p class="intro_title {% if current_language == 'pt' %}pt_title{% endif %}">{% trans "Hello, I am" %} 
-            <span class="highlights">Bianca Angelis</span>!</p>
-    </div>
-    <div class="content_holder">
-        <img class="profile_pic" src="{% static 'image/profpic.jpg' %}">
-    </div>
-</div>
-<div class="dark content_block">
-    <div class="content_holder">
-        <div class="circle">
-            {% for i in repeat %}
-                {% include 'small_icons.html' %}
-            {% endfor %}
-        </div>
-    </div>
-    <div class="content_holder">
-        <p class="text">
-            {% trans "I'm a " %}<span class="highlights">{% trans "Software Developer" %}</span>! <br/>
-            {% trans "I'm mainly in love with" %} <span class="highlights">Python</span>, <span class="highlights">
-                {% trans "Automation" %}</span> {% trans "and" %} <span class="highlights">Game Design</span>,
-            {% trans "but I enjoy challenging myself with a variety of projects." %}
-        </p>
-    </div>
-</div>
-<div class="light content_block">
-    <div class="content_holder">
-        <p class="text">
-            {% trans "I graduated in " %}<span class="highlights">{% trans "Computer Science" %}</span>{% trans " in" %} <br/>
-            <span class="subtitle highlights">dez 2022</span>
-        </p>
-    </div>
-    <hr class="vertical" style="height: 50%;">
-    <div class="content_holder">
-        <p class="text">
-            {% trans "But I've been working in the " %}<span class="highlights">{% trans "IT area" %}</span>{% trans " since" %} <br/>
-            <span class="subtitle highlights">{% trans "aug" %} 2019</span>
-        </p>
-    </div>
-</div>
-<div class="dark content_block">
-    <div class="content_holder">
-        <p class="text">
-            {% trans "Curious to see more?" %}<br/>
-            {% trans "Find me on " %}<span class="highlights">{% trans "Social Media" %}</span>!
-        </p>
-    </div>
-    <div class="content_holder">
-        <div class="light circle">
-            {% include 'social_media.html' %}
-        </div>
-    </div>
+    <h1 class="intro_title">TESTANDO</h1>
 </div>
 {% endblock content %}
