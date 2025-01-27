@@ -15,7 +15,6 @@ def home_page(request):
 
 def feed(request):
     user_lang = get_language()
-    print(user_lang)
     if str(user_lang) == 'en':
         posts = Post.objects.filter(language='en', active=True)
     else:
