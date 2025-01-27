@@ -1,4 +1,4 @@
-
+{% load i18n %}
 <style>
     .lang{
         width: 7.5rem;
@@ -11,6 +11,7 @@
         background-color: #1e2233;
     }
     .set_lang{
+        float: right;
         margin-right: -90%;
         z-index: 2;
     }
@@ -23,5 +24,14 @@
                 <p class="text">Home</p>
             </div>
         </a>
+
     </div>
+        <form method="post" action="{% url 'set_language' %}" class="set_lang">
+            {% csrf_token %}
+            {% get_current_language as current_language %}
+            <select id="language-select" name="language" onchange="this.form.submit()" class="lang small text">
+                <option value="en" {% if current_language == "en" %}selected{% endif %}>English</option>
+                <option value="pt" {% if current_language == "pt" %}selected{% endif %}>Português</option>
+              </select>
+        </form>
 </div>
