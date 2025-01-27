@@ -24,7 +24,12 @@
                 <p class="text">Home</p>
             </div>
         </a>
-
+        <a href="{% url 'feed' %}">
+            <div class="nav_button projects">
+                <p class="text">{% trans "Projects" %}</p>
+            </div>
+        </a>
+        
     </div>
         <form method="post" action="{% url 'set_language' %}" class="set_lang">
             {% csrf_token %}
