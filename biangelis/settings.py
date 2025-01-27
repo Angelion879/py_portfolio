@@ -153,7 +153,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/image')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 '''
 
-STATIC_URL = env("STATIC_HOST") + '/'
+STATIC_URL = env("STATIC_HOST")
 
 STORAGES = {
     "staticfiles": {
