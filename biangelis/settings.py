@@ -97,6 +97,7 @@ DATABASES = {
 }
 
 DATABASES["default"]["HOST"] = env('BD_ADDRESS')
+DATABASES["default"]["PORT"] = 5432
 
 '''
     'default': {
