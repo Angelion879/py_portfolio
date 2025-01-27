@@ -93,6 +93,10 @@ WSGI_APPLICATION = 'biangelis.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
+    'default': env.db(),
+}
+
+'''
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': env('BD_NAME'),
@@ -100,7 +104,7 @@ DATABASES = {
         'USER': env('BD_USERNAME'),
         'PASSWORD': env('BD_PASSWORD')
     }
-}
+'''
 
 
 # Password validation
