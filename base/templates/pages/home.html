@@ -32,7 +32,9 @@
 <div class="dark content_block">
     <div class="content_holder">
         <div class="circle">
-
+            {% for i in rep %}
+                {% include 'small_icons.html' %}
+            {% endfor %}
         </div>
     </div>
     <div class="content_holder">
@@ -68,7 +70,7 @@
     </div>
     <div class="content_holder">
         <div class="light circle">
-
+            {% include 'social_media.html' %}
         </div>
     </div>
 </div>
