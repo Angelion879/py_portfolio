@@ -96,6 +96,8 @@ DATABASES = {
     'default': env.db(),
 }
 
+DATABASES["default"]["HOST"] = env('BD_ADDRESS')
+
 '''
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
