@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% load i18n %}
+
+{% block content %}
+<style>
+    .last_link{
+        float: right;
+    }
+</style>
+
+<div class="post" style="top: 13rem;">
+    <div class="wallpaper" style="height: 52rem;">
+        {% for i in repeat %}
+            {% include 'basis/small_icons.html' %}
+        {% endfor %}
+    </div>
+    <div class="post_holder light">
+        <div class="post_content">
+            <h2 class="subtitle" style="margin: 0;">{% trans "Thank you for reaching out!" %}</h2>
+            <p class="text">{% trans "I'll do my best to get back to you as soon as possible!" %}</p>
+            <a href="{% url 'home' %}" class="preview_links highlights last_link">{% trans "Back to Home" %}</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
