@@ -2,8 +2,12 @@ from django.shortcuts import render
 
 from django.utils.translation import gettext as _, get_language
 
-from .generator import home_repeat
+from django.core.mail import EmailMessage
+from django.conf import settings
+from django.template.loader import render_to_string
 
+from biangelis.settings import env
+from .generator import home_repeat, wlpp_repeat
 from .models import Post
 
 # Create your views here.
@@ -22,3 +26,9 @@ def feed(request):
 
     context = {'posts':posts}
     return render(request, 'pages/feed.html', context)
+
+def contact(request):
+    repeat = wlpp_repeat()
+
+    context = {'repeat':repeat}
+    return render(request, 'pages/contact.html', context)
