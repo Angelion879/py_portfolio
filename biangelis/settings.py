@@ -93,11 +93,11 @@ WSGI_APPLICATION = 'biangelis.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db(),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
-
-DATABASES["default"]["HOST"] = env('BD_ADDRESS')
-DATABASES["default"]["PORT"] = 5432
 
 '''
     'default': {
