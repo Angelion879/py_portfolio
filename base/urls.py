@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
     path('', views.home_page, name='home'),
     path('feed/', views.feed, name="feed"),
+    path('contact/', views.contact, name="contact"),
 
     # Language switch path
     path('i18n/', include('django.conf.urls.i18n')),
