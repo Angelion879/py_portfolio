@@ -32,3 +32,27 @@ def contact(request):
 
     context = {'repeat':repeat}
     return render(request, 'pages/contact.html', context)
+
+# Email Send config
+def send_email(request):
+    repeat = wlpp_repeat()
+
+    if request.method == 'POST':
+        template = render_to_string('email_template.html',{
+            'name':request.POST['name'],
+            'email':request.POST['email'],
+            'message':request.POST['message'],
+        })
+
+        email = EmailMessage(
+            request.POST['subject'],
+            template,
+            settings.EMAIL_HOST_USER,
+            [env('EMAIL_RECEIVER')]
+        )
+
+        email.fail_silently=False
+        email.send()
+
+    context = {'repeat':repeat}
+    return render(request, 'pages/email_sent.html', context)

@@ -9,4 +9,7 @@ urlpatterns = [
 
     # Language switch path
     path('i18n/', include('django.conf.urls.i18n')),
+
+    # Send Email Path
+    path('send_email/', views.send_email, name='send_email')
 ]
