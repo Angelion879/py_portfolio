@@ -1,7 +1,10 @@
-runtime: python312
+runtime: python
 service: default
 env: flex
 entrypoint: gunicorn -b :$PORT biangelis.wsgi
 
 beta_settings:
     cloud_sql_instances: personal-448822:southamerica-east1:personal-projects
+
+runtime_config:
+  python_version: 3.7
