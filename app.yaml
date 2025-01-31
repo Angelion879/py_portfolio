@@ -3,8 +3,9 @@ service: default
 env: flex
 entrypoint: gunicorn -b :$PORT biangelis.wsgi
 
-beta_settings:
-    cloud_sql_instances: personal-448822:southamerica-east1:personal-projects
+manual_scaling:
+      instances: 1
 
 runtime_config:
-  python_version: 3.10
+    operating_system: "ubuntu22"
+    runtime_version: "3.12"
