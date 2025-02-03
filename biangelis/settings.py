@@ -96,8 +96,9 @@ DATABASES = {
     'default': env.db(),
 }
 
-DATABASES["default"]["HOST"] = env('BD_ADDRESS')
-DATABASES["default"]["PORT"] = 5432
+if env('DEBUG'):
+    DATABASES["default"]["HOST"] = env('BD_ADDRESS')
+    DATABASES["default"]["PORT"] = 5432
 #REMEMBER TO TURN IT ON FIRST
 
 '''
