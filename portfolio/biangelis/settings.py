@@ -28,7 +28,7 @@ except KeyError:
     SECRET_KEY = django_secret
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost','127.0.0.1','bianca-angelis-472c79304cc1.herokuapp.com']
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'portfolio_app.apps.PortfolioAppConfig',
 ]
 
 MIDDLEWARE = [
