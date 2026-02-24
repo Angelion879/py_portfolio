@@ -21,5 +21,22 @@
         <img class="profile_pic" src="{% static 'images/profpic.jpg' %}">
     </div>
 </div>
+<div class="dark content_block">
+    <div class="content_holder">
+        <div class="circle">
+            {% for i in repeat %}
+                {% include 'icons.html' %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="content_holder">
+        <p class="text">
+            I'm a <span class="highlights">Software Developer</span>! <br/>
+            I'm mainly in love with <span class="highlights">Python</span>, <span class="highlights">
+                Automation</span> and <span class="highlights">Game Design</span>,
+            but I enjoy challenging myself with a variety of projects.
+        </p>
+    </div>
+</div>
 
 {% endblock content %}
