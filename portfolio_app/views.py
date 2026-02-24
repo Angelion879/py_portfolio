@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
+from django.utils.translation import gettext as _
+
 # Create your views here.
-def index(request):
+def home(request):
     context = None
-    return render(request, 'index.html', context)
+    return render(request, 'pages/home.html', context)
