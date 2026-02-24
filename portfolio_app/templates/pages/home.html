@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .intro_title{
+        font-family: "Orbitron", sans-serif;
+        font-size: 8rem;
+    }
+    .pt_title{
+        font-size: 6.5rem;
+    }
+</style>
+
+<div class="intro light content_block">
+    <div class="content_holder">
+        <p class="intro_title text">Hello, I am
+            <span class="highlights">Bianca Angelis</span>!</p>
+    </div>
+    <div class="content_holder">
+        <img class="profile_pic" src="{% static 'images/profpic.jpg' %}">
+    </div>
+</div>
+
+{% endblock content %}
