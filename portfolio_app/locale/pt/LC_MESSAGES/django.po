@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 23:34-0300\n"
+"POT-Creation-Date: 2026-02-25 10:46-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,47 +18,93 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\portfolio_app\templates\nav_bar.html:29
+#: .\portfolio_app\templates\nav_bar.html:37
+#: .\portfolio_app\templates\pages\home.html:71
 msgid "Projects"
 msgstr "Projetos"
 
-#: .\portfolio_app\templates\nav_bar.html:34
+#: .\portfolio_app\templates\nav_bar.html:42
 msgid "Contact Me"
 msgstr "Contate-me"
 
-#: .\portfolio_app\templates\nav_bar.html:40
+#: .\portfolio_app\templates\nav_bar.html:48
 msgid "New Post"
 msgstr "Novo Post"
 
-#: .\portfolio_app\templates\pages\home.html:26
+#: .\portfolio_app\templates\pages\home.html:27
 msgid "Hello, I am"
-msgstr "Olá, sou"
+msgstr "Olá, eu sou"
 
-#: .\portfolio_app\templates\pages\home.html:43
+#: .\portfolio_app\templates\pages\home.html:44
 msgid "I'm a "
 msgstr "Sou um "
 
-#: .\portfolio_app\templates\pages\home.html:43
+#: .\portfolio_app\templates\pages\home.html:44
 msgid "Software Developer"
 msgstr "Desenvolvedor de Software"
 
-#: .\portfolio_app\templates\pages\home.html:44
+#: .\portfolio_app\templates\pages\home.html:45
 msgid "I have a especial interest for "
 msgstr "Tenho um interesse especial por "
 
-#: .\portfolio_app\templates\pages\home.html:45
+#: .\portfolio_app\templates\pages\home.html:46
 msgid "Automation"
 msgstr "Automação"
 
-#: .\portfolio_app\templates\pages\home.html:45
+#: .\portfolio_app\templates\pages\home.html:46
 #: .\venv\Lib\site-packages\django\db\models\base.py:1633
 #: .\venv\Lib\site-packages\django\forms\models.py:932
 msgid "and"
 msgstr "e"
 
-#: .\portfolio_app\templates\pages\home.html:46
+#: .\portfolio_app\templates\pages\home.html:47
 msgid "but I enjoy challenging myself with a wide variety of projects."
 msgstr "mas gosto de me desafiar com diversos tipos de projetos."
+
+#: .\portfolio_app\templates\pages\home.html:54
+msgid "I graduated in "
+msgstr "Me formei em "
+
+#: .\portfolio_app\templates\pages\home.html:54
+msgid "Computer Science"
+msgstr "Ciência da Computação"
+
+#: .\portfolio_app\templates\pages\home.html:54
+msgid " in"
+msgstr " em"
+
+#: .\portfolio_app\templates\pages\home.html:61
+msgid "But I've been working in the "
+msgstr "Mas tenho trabalhado na "
+
+#: .\portfolio_app\templates\pages\home.html:61
+msgid "IT area"
+msgstr "área de TI"
+
+#: .\portfolio_app\templates\pages\home.html:61
+msgid " since"
+msgstr " desde"
+
+#: .\portfolio_app\templates\pages\home.html:62
+#: .\venv\Lib\site-packages\django\utils\dates.py:46
+msgid "aug"
+msgstr "ago"
+
+#: .\portfolio_app\templates\pages\home.html:69
+msgid "Curious to see more?"
+msgstr "Quer ver mais?"
+
+#: .\portfolio_app\templates\pages\home.html:70
+msgid "Check my "
+msgstr "Confira meus "
+
+#: .\portfolio_app\templates\pages\home.html:72
+msgid " or find me on "
+msgstr " ou me encontre nas "
+
+#: .\portfolio_app\templates\pages\home.html:72
+msgid "Social Media"
+msgstr "Redes Sociais"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
@@ -929,10 +975,6 @@ msgstr ""
 msgid "jul"
 msgstr ""
 
-#: .\venv\Lib\site-packages\django\utils\dates.py:46
-msgid "aug"
-msgstr ""
-
 #: .\venv\Lib\site-packages\django\utils\dates.py:47
 msgid "sep"
 msgstr ""
@@ -1299,6 +1341,3 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:236
 msgid "Connect, get help, or contribute"
 msgstr ""
-
-#~ msgid "I'm mainly in love with"
-#~ msgstr "Tenho um interesse especial por"
