@@ -23,7 +23,7 @@
         {% endfor %}
     </div>
     <div class="form_container light">
-        <form class="text" method="POST" action="#">
+        <form class="text" method="POST" action="{% url 'send_email' %}">
             {% csrf_token %}
             <div>
                 <label>{% trans "Name" %}</label>
