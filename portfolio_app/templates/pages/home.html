@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <style>
@@ -10,11 +11,19 @@
     .pt_title{
         font-size: 6.5rem;
     }
+    a>.nav_button.home{
+        background-color: #ffce8a;
+        pointer-events: none;
+        .text{
+            color: #1e2233;
+        }
+    }
 </style>
 
 <div class="intro light content_block">
     <div class="content_holder">
-        <p class="intro_title text">Hello, I am
+        {% get_current_language as current_language %}
+        <p class="intro_title">{% trans "Hello, I am" %} 
             <span class="highlights">Bianca Angelis</span>!</p>
     </div>
     <div class="content_holder">
@@ -31,10 +40,10 @@
     </div>
     <div class="content_holder">
         <p class="text">
-            I'm a <span class="highlights">Software Developer</span>! <br/>
-            I'm mainly in love with <span class="highlights">Python</span>, <span class="highlights">
-                Automation</span> and <span class="highlights">Game Design</span>,
-            but I enjoy challenging myself with a variety of projects.
+            {% trans "I'm a " %}<span class="highlights">{% trans "Software Developer" %}</span>! <br/>
+            {% trans "I have a especial interest for " %} <span class="highlights">Python</span>, <span class="highlights">
+                {% trans "Automation" %}</span> {% trans "and" %} <span class="highlights">Game Design</span>,
+            {% trans "but I enjoy challenging myself with a wide variety of projects." %}
         </p>
     </div>
 </div>
