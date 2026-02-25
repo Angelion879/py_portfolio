@@ -1,0 +1,57 @@
+{% load i18n %}
+
+<style>
+    .lang{
+        width: 10rem;
+        height: 3.5rem;
+        border: 0;
+        border-radius: 0.7rem;
+        background-color: #23263a;
+    }
+    .lang:hover{
+        background-color: #1e2233;
+    }
+    .set_lang{
+        margin-right: -90%;
+        z-index: 2;
+    }
+</style>
+
+<div class="navbar">
+    <div class="navbar holder">
+        <a href="{% url 'home' %}">
+            <div class="nav_button home">
+                <p class="text">Home</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="nav_button projects">
+                <p class="text">{% trans "Projects" %}</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="nav_button contact">
+                <p class="text">{% trans "Contact Me" %}</p>
+            </div>
+        </a>
+        {% if request.user.is_authenticated %}
+            <a href="#">
+                <div class="nav_button create">
+                    <p class="text">{% trans "New Post" %}</p>
+                </div>
+            </a>
+            {% endif %}
+        </div>
+        <form method="post" action="{% url 'set_language' %}" class="set_lang">
+            {% csrf_token %}
+            {% get_current_language as current_language %}
+            <select id="language-select" name="language" onchange="this.form.submit()" class="lang small text">
+                <option value="en" {% if current_language == "en" %}selected{% endif %}>
+                    English
+                </option>
+                <option value="pt" {% if current_language == "pt" %}selected{% endif %}>
+                    Português
+            </option>
+          </select>
+    </form>
+</div>
