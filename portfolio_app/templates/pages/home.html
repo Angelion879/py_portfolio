@@ -1,0 +1,82 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<style>
+    .intro_title{
+        font-family: "Orbitron", sans-serif;
+        font-size: 8rem;
+    }
+    .opposite:hover{
+        color: #f8fcff;
+
+    }
+    a>.nav_button.home{
+        background-color: #ffce8a;
+        pointer-events: none;
+        .text{
+            color: #1e2233;
+        }
+    }
+</style>
+
+<div class="intro light content_block">
+    <div class="content_holder">
+        {% get_current_language as current_language %}
+        <p class="intro_title">{% trans "Hello, I am" %} 
+            <span class="highlights">Bianca Angelis</span>!</p>
+    </div>
+    <div class="content_holder">
+        <img class="profile_pic" src="{% static 'images/profpic.jpg' %}">
+    </div>
+</div>
+<div class="dark content_block">
+    <div class="content_holder">
+        <div class="circle">
+            {% for i in repeat %}
+                {% include 'icons.html' %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="content_holder">
+        <p class="text">
+            {% trans "I'm a " %}<span class="highlights">{% trans "Software Developer" %}</span>! <br/>
+            {% trans "I have a especial interest for " %} <span class="highlights">Python</span>, <span class="highlights">
+                {% trans "Automation" %}</span> {% trans "and" %} <span class="highlights">Game Design</span>,
+            {% trans "but I enjoy challenging myself with a wide variety of projects." %}
+        </p>
+    </div>
+</div>
+<div class="light content_block">
+    <div class="content_holder">
+        <p class="text">
+            {% trans "I graduated in " %}<span class="highlights">{% trans "Computer Science" %}</span>{% trans " in" %} <br/>
+            <span class="subtitle highlights">dez 2022</span>
+        </p>
+    </div>
+    <hr class="vertical" style="height: 50%;">
+    <div class="content_holder">
+        <p class="text">
+            {% trans "But I've been working in the " %}<span class="highlights">{% trans "IT area" %}</span>{% trans " since" %} <br/>
+            <span class="subtitle highlights">{% trans "aug" %} 2019</span>
+        </p>
+    </div>
+</div>
+<div class="dark content_block">
+    <div class="content_holder">
+        <p class="text">
+            {% trans "Curious to see more?" %}<br/>
+            {% trans "Check my " %}
+            <a class="highlights opposite" href="#">{% trans "Projects" %}</a>,
+            {% trans " or find me on " %}<span class="highlights">{% trans "Social Media" %}</span>!
+        </p>
+    </div>
+    <div class="content_holder">
+        <div class="light circle">
+            {% include 'social_media_links.html' %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
