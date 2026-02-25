@@ -1,0 +1,58 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% block content %}
+
+<style>
+    a>.nav_button.contact{
+        background-color: #ffce8a;
+        pointer-events: none;
+        .text{
+            color: #1e2233;
+        }
+    }
+    .form_container{
+        height: 50rem;
+    }
+</style>
+
+<div class="post" style="top: 13rem;">
+    <div class="wallpaper">
+        {% for i in repeat %}
+            {% include 'icons.html' %}
+        {% endfor %}
+    </div>
+    <div class="form_container light">
+        <form class="text" method="POST" action="#">
+            {% csrf_token %}
+            <div>
+                <label>{% trans "Name" %}</label>
+            </div>
+            <div>
+                <input class="form-control" type="text" name="name">
+            </div>
+            <div>
+                <label>{% trans "Subject" %}</label>
+            </div>
+            <div>
+                <input class="form-control" type="text" name="subject">
+            </div>
+            <div>
+                <label>Email</label>
+            </div>
+            <div>
+                <input class="form-control" type="text" name="email">
+            </div>
+            <div>
+                <label>{% trans "Message" %}</label>
+            </div>
+            <div>
+                <textarea class="form-control" name="message"></textarea>
+            </div>
+
+            <input class="text sub_button" type="submit" value="{% trans 'Send' %}">        
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
