@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path("", views.home, name="home"),
+    path("contact/", views.contact, name="contact"),
 
     # Language path
     path('i18n/', include('django.conf.urls.i18n')),
