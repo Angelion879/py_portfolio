@@ -261,7 +261,7 @@ textarea{
     width: 40rem;
     height: 40rem;
     border-radius: 50%;
-    rotate: 28deg;
+    rotate: 0deg;
     object-fit: cover;
 }
 
