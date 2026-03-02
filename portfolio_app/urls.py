@@ -11,4 +11,8 @@ urlpatterns = [
 
     # Language path
     path('i18n/', include('django.conf.urls.i18n')),
+
+    # CRUD urls
+    path('post/<slug:slug>/', views.post, name="post"),
+    path('create_post/', views.create_post, name="create_post"),
 ]

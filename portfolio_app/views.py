@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.utils.translation import gettext as _, get_language
+from django.contrib.auth.decorators import login_required
 
 from django.core.mail import EmailMessage
 from django.conf import settings
@@ -7,7 +8,9 @@ from django.template.loader import render_to_string
 
 from biangelis.keys import receiver
 from .models import Post
+from .forms import PostForm
 
+wlpp_repeat = lambda: list(range(1,151))
 
 # Create your views here.
 def home(request):
@@ -17,14 +20,11 @@ def home(request):
     return render(request, 'pages/home.html', context)
 
 def contact(request):
-    wlpp_repeat = lambda: list(range(1,151))
-
     context = {'repeat':wlpp_repeat}
     return render(request, 'pages/contact.html', context)
 
 # Email sending feat
 def send_email(request):
-    wlpp_repeat = lambda: list(range(1,151))
 
     if request.method == 'POST':
         template = render_to_string('email_structure.html',{
@@ -56,3 +56,24 @@ def feed(request):
 
     context = {'posts':posts}
     return render(request, 'pages/feed.html', context)
+
+def post(request, slug):
+    content = Post.objects.get(slug=slug)
+
+    context = {'post':content, 'repeat':wlpp_repeat}
+    return render(request, 'pages/post.html', context)
+
+# CRUD views
+
+@login_required(login_url="home")
+def create_post(request):
+    form = PostForm()
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+        return redirect('feed')
+
+    context = {'form':form, 'repeat':wlpp_repeat}
+    return render(request, 'CRUD/create.html', context)
