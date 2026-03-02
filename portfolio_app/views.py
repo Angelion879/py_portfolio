@@ -77,3 +77,17 @@ def create_post(request):
 
     context = {'form':form, 'repeat':wlpp_repeat}
     return render(request, 'CRUD/create.html', context)
+
+@login_required(login_url="home")
+def update_post(request,slug):
+    up_post = Post.objects.get(slug=slug)
+    form = PostForm(instance=up_post)
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=up_post)
+        if form.is_valid():
+            form.save()
+        return redirect('feed')
+
+    context = {'form':form, 'repeat':wlpp_repeat}
+    return render(request, 'CRUD/create.html', context)
