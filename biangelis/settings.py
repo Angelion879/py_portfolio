@@ -139,7 +139,7 @@ USE_TZ = True
 
 STATIC_URL = 'portfolio_app/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'portfolio_app/static/')
 
 # Contact me feature
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
