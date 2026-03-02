@@ -134,12 +134,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-# STATIC_URL = '/static/'
-# STATIC_ROOT = '/home/Angelion879/py_portfolio/static'
+STATIC_URL = '/static/'
+STATIC_ROOT = '/home/Angelion879/py_portfolio/static'
 
-STATIC_URL = 'portfolio_app/static/'
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'portfolio_app/static/')
+MEDIA_URL = 'portfolio_app/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'portfolio_app/static/')
 
 # Contact me feature
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
