@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-25 10:46-0300\n"
+"POT-Creation-Date: 2026-02-25 17:08-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,9 +31,37 @@ msgstr "Contate-me"
 msgid "New Post"
 msgstr "Novo Post"
 
+#: .\portfolio_app\templates\pages\confirmation.html:20
+msgid "Thank you for reaching out!"
+msgstr "Obrigada por entrar em contato!"
+
+#: .\portfolio_app\templates\pages\confirmation.html:21
+msgid "I'll do my best to get back to you as soon as possible!"
+msgstr "Farei o possível para retornar o quanto antes!"
+
+#: .\portfolio_app\templates\pages\confirmation.html:22
+msgid "Back to Home"
+msgstr "Voltar para Home"
+
+#: .\portfolio_app\templates\pages\contact.html:29
+msgid "Name"
+msgstr "Nome"
+
+#: .\portfolio_app\templates\pages\contact.html:35
+msgid "Subject"
+msgstr "Tópico"
+
+#: .\portfolio_app\templates\pages\contact.html:47
+msgid "Message"
+msgstr "Mensagem"
+
+#: .\portfolio_app\templates\pages\contact.html:53
+msgid "Send"
+msgstr "Enviar"
+
 #: .\portfolio_app\templates\pages\home.html:27
 msgid "Hello, I am"
-msgstr "Olá, eu sou"
+msgstr "Oi, eu sou"
 
 #: .\portfolio_app\templates\pages\home.html:44
 msgid "I'm a "
