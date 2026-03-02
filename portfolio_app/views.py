@@ -91,3 +91,13 @@ def update_post(request,slug):
 
     context = {'form':form, 'repeat':wlpp_repeat}
     return render(request, 'CRUD/create.html', context)
+
+@login_required(login_url="home")
+def delete_post(request,slug):
+    del_post = Post.objects.get(slug=slug)
+
+    if request.method == 'POST':
+        del_post.delete()
+        return redirect('feed')
+    context={'item':del_post}
+    return render(request, 'CRUD/delete.html', context)

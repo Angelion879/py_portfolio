@@ -26,7 +26,7 @@
                     <hr class="vertical">
                     <a href="{% url 'update_post' post.slug %}" class="highlights">Edit</a>
                     <hr class="vertical">
-                    <a href="#" class="highlights">Delete</a>
+                    <a href="{% url 'delete_post' post.slug %}" class="highlights">Delete</a>
                 {% endif %}
             </div>
         </div>
