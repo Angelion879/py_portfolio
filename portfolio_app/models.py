@@ -12,7 +12,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     sub_title = models.CharField(max_length=200, null=True, blank=True)
     thumbnail = models.ImageField(
-        null=True, blank=True, upload_to="images", default="images/placeholder.png")
+        null=True, blank=True, upload_to="portfolio_app/static/post_img", default="portfolio_app/static/images/placeholder.png")
     body = models.TextField(null=True, blank=True)
     active = models.BooleanField(default=False)
     language = models.ForeignKey(Language, on_delete=models.CASCADE, null=True)
