@@ -136,7 +136,7 @@ form{
 .form_container{
     position: relative;
     height: 63rem;
-    width: 58rem;
+    width: 60%;
     border-radius: 3rem;
     display: flex;
     align-items: center;
