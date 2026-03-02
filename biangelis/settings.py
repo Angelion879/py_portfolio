@@ -141,8 +141,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-MEDIA_URL = 'portfolio_app/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'portfolio_app/static/')
+MEDIA_URL = '/images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 # Contact me feature
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
