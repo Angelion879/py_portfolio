@@ -35,24 +35,20 @@ form{
     color: #ffce8a;
 }
 
-.intro{
-    top: 8rem;
+/* .intro{
+    top: 1rem;
     position: relative;
-}
-
-.intro>*{
-    margin-left: 4rem;
-}
+} */
 
 .title{
     font-family: "Orbitron", sans-serif;
-    font-size: 5rem;
+    font-size: 5vw;
     font-weight: 400;
 }
 
 .subtitle{
     font-family: "Orbitron", sans-serif;
-    font-size: 3.5rem;
+    font-size: 3.5vw;
     font-weight: 400;
 }
 
@@ -60,20 +56,20 @@ form{
     color: #f8fcff;
     font-family: "Space Mono", monospace;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     text-align: justify;
 }
 
 .small.text{
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1vw;
     text-align: center;
 }
 
 .preview_title{
     font-family: "Orbitron", sans-serif;
     font-weight: 800;
-    font-size: 3rem;
+    font-size: 3vw;
     margin: 0;
 }
 
@@ -93,7 +89,7 @@ form{
 
 .navbar{
     width: 100%;
-    height: 6rem;
+    height: 5rem;
     z-index: 1;
     background-color: #1d2132;
     position: fixed;
@@ -104,13 +100,13 @@ form{
 }
 
 .navbar .holder {
-    width: 50%;
+    width: 50vw;
     display: flex;
     justify-content: space-evenly;
 }
 
 .nav_button{
-    width: 16rem;
+    width: 16vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,7 +122,7 @@ form{
 .content_block{
     top: 9rem;
     width: 100%;
-    height: 45rem;
+    height: 40vw;
     position: relative;
     display: flex;
     align-items: center;
@@ -135,8 +131,8 @@ form{
 
 .form_container{
     position: relative;
-    height: 63rem;
-    width: 60%;
+    height: 52vw;
+    width: 60vw;
     border-radius: 3rem;
     display: flex;
     align-items: center;
@@ -144,27 +140,28 @@ form{
 }
 
 input{
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.3vw;
     background-color: #1e2233;
     border: 0;
     border-radius: 0.5rem;
 }
 
 [type="text"]{
-    height: 2rem;
-    width: 50rem;
+    height: 2vw;
+    width: 45vw;
 }
 
-textarea{
-    height: 15rem;
-    width: 50rem;
+textarea.form-control{
+    height: 20vw;
     resize: none;
 }
 
 .form-control{
-    margin-bottom: 1.3rem;
+    height: 2.5vw;
+    width: 55vw;
+    margin-bottom: 1vw;
     color: #f8fcff;
-    font-size: 1rem;
+    font-size: 1vw;
     font-family: "Space Mono", monospace;
     font-weight: 400;
     background-color: #1e2233;
@@ -180,8 +177,8 @@ textarea{
 
 .sub_button{
     margin-bottom: 0;
-    height: 2rem;
-    width: 10rem;
+    height: 2.5vw;
+    width: 10vw;
     float: right;
 }
 
@@ -258,25 +255,24 @@ textarea{
 }
 
 .profile_pic{
-    width: 40rem;
-    height: 40rem;
+    width: 36vw;
+    height: 36vw;
     border-radius: 50%;
-    rotate: 0deg;
     object-fit: cover;
 }
 
 .small_icon{
     margin-left: 1.5rem;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5vw;
+    height: 3.5vw;
     display: flex;
 }
 
 .wallpaper .small_icon{
-    margin-top: 2.6rem;
-    margin-left: 1rem;
-    width: 3.5rem;
-    height: 3.5rem;
+    margin-top: 2.6vw;
+    margin-left: 1vw;
+    width: 4%;
+    height: 4%;
 }
 
 .wallpaper{
@@ -293,8 +289,8 @@ textarea{
 }
 
 .circle{
-    width: 40rem;
-    height: 40rem;
+    width: 36vw;
+    height: 36vw;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
