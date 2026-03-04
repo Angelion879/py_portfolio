@@ -23,6 +23,15 @@ form{
     display: flexbox;
 }
 
+button{
+    width: 4vw;
+    height: 4vw;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+}
+
 .light{
     background-color: #23263a;
 }
@@ -35,24 +44,20 @@ form{
     color: #ffce8a;
 }
 
-.intro{
-    top: 8rem;
-    position: relative;
-}
-
-.intro>*{
-    margin-left: 4rem;
+.intro_title{
+    font-family: "Orbitron", sans-serif;
+    font-size: 7.5vw;
 }
 
 .title{
     font-family: "Orbitron", sans-serif;
-    font-size: 5rem;
+    font-size: 5vw;
     font-weight: 400;
 }
 
 .subtitle{
     font-family: "Orbitron", sans-serif;
-    font-size: 3.5rem;
+    font-size: 3.5vw;
     font-weight: 400;
 }
 
@@ -60,20 +65,20 @@ form{
     color: #f8fcff;
     font-family: "Space Mono", monospace;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     text-align: justify;
 }
 
 .small.text{
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1vw;
     text-align: center;
 }
 
 .preview_title{
     font-family: "Orbitron", sans-serif;
     font-weight: 800;
-    font-size: 3rem;
+    font-size: 3vw;
     margin: 0;
 }
 
@@ -91,9 +96,22 @@ form{
     align-items: center;
 }
 
+.lang{
+    width: 3.5vw;
+    height: 3.5vw;
+}
+
+.set_lang{
+    width: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: -90%;
+    z-index: 2;
+}
+
 .navbar{
     width: 100%;
-    height: 6rem;
+    height: 5rem;
     z-index: 1;
     background-color: #1d2132;
     position: fixed;
@@ -103,14 +121,18 @@ form{
     justify-content: center;
 }
 
+.menu{
+    display: none;
+}
+
 .navbar .holder {
-    width: 50%;
+    width: 50vw;
     display: flex;
     justify-content: space-evenly;
 }
 
 .nav_button{
-    width: 16rem;
+    width: 16vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,7 +148,7 @@ form{
 .content_block{
     top: 9rem;
     width: 100%;
-    height: 45rem;
+    height: 40vw;
     position: relative;
     display: flex;
     align-items: center;
@@ -135,8 +157,8 @@ form{
 
 .form_container{
     position: relative;
-    height: 63rem;
-    width: 60%;
+    height: 52vw;
+    width: 60vw;
     border-radius: 3rem;
     display: flex;
     align-items: center;
@@ -144,27 +166,28 @@ form{
 }
 
 input{
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.3vw;
     background-color: #1e2233;
     border: 0;
     border-radius: 0.5rem;
 }
 
 [type="text"]{
-    height: 2rem;
-    width: 50rem;
+    height: 2vw;
+    width: 45vw;
 }
 
-textarea{
-    height: 15rem;
-    width: 50rem;
+textarea.form-control{
+    height: 20vw;
     resize: none;
 }
 
 .form-control{
-    margin-bottom: 1.3rem;
+    height: 2.5vw;
+    width: 55vw;
+    margin-bottom: 1vw;
     color: #f8fcff;
-    font-size: 1rem;
+    font-size: 1vw;
     font-family: "Space Mono", monospace;
     font-weight: 400;
     background-color: #1e2233;
@@ -180,8 +203,8 @@ textarea{
 
 .sub_button{
     margin-bottom: 0;
-    height: 2rem;
-    width: 10rem;
+    height: 2.5vw;
+    width: 10vw;
     float: right;
 }
 
@@ -258,25 +281,24 @@ textarea{
 }
 
 .profile_pic{
-    width: 40rem;
-    height: 40rem;
+    width: 36vw;
+    height: 36vw;
     border-radius: 50%;
-    rotate: 0deg;
     object-fit: cover;
 }
 
 .small_icon{
     margin-left: 1.5rem;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5vw;
+    height: 3.5vw;
     display: flex;
 }
 
 .wallpaper .small_icon{
-    margin-top: 2.6rem;
-    margin-left: 1rem;
-    width: 3.5rem;
-    height: 3.5rem;
+    margin-top: 2.6vw;
+    margin-left: 1vw;
+    width: 4%;
+    height: 4%;
 }
 
 .wallpaper{
@@ -293,8 +315,8 @@ textarea{
 }
 
 .circle{
-    width: 40rem;
-    height: 40rem;
+    width: 36vw;
+    height: 36vw;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -324,4 +346,98 @@ textarea{
 }
 .sub_button:hover{
     background-color: #ffbe63;
+}
+
+@media screen and (max-width: 600px) {
+    .intro_title{
+        font-size: 8vw;
+    }
+    .text{
+        font-size: 3.25vw;
+        text-align: center;
+    }
+    .subtitle{
+        font-size: 5vw;
+    }
+    .circle{
+        width: 40vw;
+        height: 40vw;
+    }
+    .profile_pic{
+        width: 40vw;
+        height: 40vw;
+    }
+    .small_icon{
+        margin-left: 0.3rem;
+        margin-top: 0.3rem;
+        width: 4.3vw;
+        height: 4.3vw;
+    }
+    .small_icon.social{
+        width: 6.5vw;
+        height: 6.5vw;
+    }
+    .menu_icon{
+        width: 5vw;
+        height: 5vw;
+    }
+    .content_block{
+        height: 65vw;
+        top: 20vw;
+    }
+    .navbar{
+        height: 15vw;
+        a:not(.menu){
+            display: none;
+        }
+    }
+    .menu {
+        float: left;
+        display: block;
+        position: absolute;
+        left: 5vw;
+        top: 5vw;
+    }
+    .navbar.responsive{
+        height: 60vw;
+        position: relative;
+    }
+    .navbar.responsive .menu{
+        position: absolute;
+        left: 5vw;
+        top: 5vw;
+    }
+    .navbar.responsive a{
+        float: none;
+        display: block;
+        text-align: left;
+        .text{
+            font-size: 4.5vw;
+            margin-left: 3vw;
+        }
+    }
+    .navbar.responsive .holder{
+        top: 19vw;
+        width: 80vw;
+        display: block;
+        .nav_button{
+            height: 13vw;
+            width: 60vw;
+            justify-content: left;
+        }
+    }
+    button{
+        width: 8vw;
+        height: 8vw;
+    }
+    .lang{
+        width: 8vw;
+        height: 8vw;
+    }
+    .set_lang{
+        position: absolute;
+        top: 4vw;
+        width: 20%;
+        margin-right: -70%;
+    }
 }
