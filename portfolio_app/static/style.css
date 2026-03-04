@@ -353,7 +353,8 @@ textarea.form-control{
         font-size: 8vw;
     }
     .text{
-        font-size: 2.8vw;
+        font-size: 3.25vw;
+        text-align: left;
     }
     .subtitle{
         font-size: 5vw;
@@ -371,6 +372,10 @@ textarea.form-control{
         margin-top: 0.3rem;
         width: 4.3vw;
         height: 4.3vw;
+    }
+    .small_icon.social{
+        width: 6.5vw;
+        height: 6.5vw;
     }
     .menu_icon{
         width: 5vw;
