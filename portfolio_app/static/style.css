@@ -51,7 +51,7 @@ button{
 
 .title{
     font-family: "Orbitron", sans-serif;
-    font-size: 5vw;
+    font-size: 6vw;
     font-weight: 400;
 }
 
@@ -166,7 +166,7 @@ button{
 }
 
 .form_container.crud{
-    top: -8vw;
+    top: -3rem;
     height: 70vw;
     width: 65%;
     .sub_button{
@@ -175,7 +175,7 @@ button{
 }
 
 .wallpaper.crud{
-    top: -18vw;
+    top: -8rem;
     height: 90vw;
     .small_icon{
         margin-top: 2vw;
@@ -262,6 +262,29 @@ textarea.form-control{
     object-fit: cover;
 }
 
+.intro.dark{
+    top: 5rem;
+    position: relative;
+    margin-left: 0.5vw;
+    padding: 2vw;
+    .title{
+        margin: 0;
+    }
+    .subtitle{
+        margin: 0;
+    }
+}
+
+.wallpaper.post{
+    top: -8rem;
+    .small_icon{
+        margin-top: 2vw;
+        margin-left: 2vw;
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+}
+
 .post{
     top: 12rem;
     width: 100%;
@@ -271,7 +294,8 @@ textarea.form-control{
 }
 
 .post_holder{
-    width: 75%;
+    top: -3rem;
+    width: 85%;
     border-radius: 3rem;
     position: relative;
     align-items: center;
@@ -279,9 +303,9 @@ textarea.form-control{
 }
 
 .post_content{
-    padding-top: 7rem;
-    padding-bottom: 5rem;
-    width: 80%;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    width: 90%;
     position: relative;
 }
 
@@ -294,14 +318,18 @@ textarea.form-control{
 }
 
 .post_img{
-    margin-right: 3rem;
-    margin-bottom: 1rem;
-    height: 25rem;
-    width: 35rem;
-    border-radius: 3rem;
+    margin-right: 3.5vw;
+    margin-bottom: 2vw;
+    height: 28vw;
+    width: 40vw;
+    border-radius: 3vw;
     object-fit: cover;
     float: left;
 }
+
+.last_link{
+        float: right;
+    }
 
 .profile_pic{
     width: 36vw;
@@ -519,6 +547,51 @@ textarea.form-control{
         }
         .preview_links{
             font-size: 2.5vw;
+        }
+    }
+    .intro.dark{
+        top: 20vw;
+        position: relative;
+        a {
+            font-size: 3vw;
+        }
+        .title{
+            font-size: 12vw;
+        }
+        .subtitle{
+            font-size: 7vw;
+        }
+    }
+    .wallpaper.post{
+        top: -28vw;
+        height: 200vw;
+        .small_icon{
+            margin-top: 5vw;
+            margin-left: 2.3vw;
+            width: 3.3vw;
+            height: 3.3vw;
+        }
+    }
+    .post_holder{
+        top: -18vw;
+        width: 88%;
+        border-radius: 5vw;
+        padding-bottom: 5vw;
+        .post_img{
+            float: none;
+            width: 100%;
+            height: 45vw;
+            border-radius: 5vw;
+        }
+        a {
+            font-size: 3vw;
+        }
+        p{
+            text-align: justify;
+            font-size: 3.6vw;
+        }
+        .last_link{
+            font-size: 3.5vw;
         }
     }
 }
