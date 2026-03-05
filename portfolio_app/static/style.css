@@ -207,6 +207,9 @@ textarea.form-control{
     width: 10vw;
     float: right;
 }
+.text.sub_button{
+    font-size: 1.5vw;
+}
 
 .preview_holder{
     top: 12rem;
@@ -377,6 +380,16 @@ textarea.form-control{
         width: 6.5vw;
         height: 6.5vw;
     }
+    .wallpaper .small_icon{
+        margin-top: 1vw;
+        margin-left: 2vw;
+        width: 3vw;
+        height: 3vw;
+    }
+    .wallpaper{
+        top: -40vw;
+        height: 160vw;
+    }
     .menu_icon{
         width: 5vw;
         height: 5vw;
@@ -384,6 +397,34 @@ textarea.form-control{
     .content_block{
         height: 65vw;
         top: 20vw;
+    }
+    .form_container{
+        height: 100vw;
+        width: 80%;
+        border-radius: 5%;
+        position: absolute;
+        top: -20vw;
+        input{
+            margin-bottom: 3vw;
+        }
+        textarea{
+            height: 30vw;
+        }
+        .text{
+            text-align: left;            
+        }
+    }
+    .form-control{
+        height: 5vw;
+        width: 70vw;
+    }
+    .sub_button{
+        height: 5vw;
+        width: 15vw;
+    }
+    .text.sub_button{
+        text-align: center;
+        font-size: 2.5vw;
     }
     .navbar{
         height: 15vw;
