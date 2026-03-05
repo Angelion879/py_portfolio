@@ -51,7 +51,7 @@ button{
 
 .title{
     font-family: "Orbitron", sans-serif;
-    font-size: 5vw;
+    font-size: 6vw;
     font-weight: 400;
 }
 
@@ -85,13 +85,13 @@ button{
 .preview_subtitle{
     font-family: "Space Mono", monospace;
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1.3vw;
 }
 
 .preview_links {
     font-family: "Space Mono", monospace;
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1.2vw;
     display: flex;
     align-items: center;
 }
@@ -165,7 +165,28 @@ button{
     justify-content: center;
 }
 
+.form_container.crud{
+    top: -3rem;
+    height: 70vw;
+    width: 65%;
+    .sub_button{
+        width: 13vw;
+    }
+}
+
+.wallpaper.crud{
+    top: -8rem;
+    height: 90vw;
+    .small_icon{
+        margin-top: 2vw;
+        margin-left: 2vw;
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+}
+
 input{
+    margin-top: 1.2vw;
     margin-bottom: 1.3vw;
     background-color: #1e2233;
     border: 0;
@@ -178,6 +199,7 @@ input{
 }
 
 textarea.form-control{
+    margin-top: 1.2vw;
     height: 20vw;
     resize: none;
 }
@@ -207,9 +229,12 @@ textarea.form-control{
     width: 10vw;
     float: right;
 }
+.text.sub_button{
+    font-size: 1.5vw;
+}
 
 .preview_holder{
-    top: 12rem;
+    top: 10vw;
     width: 100%;
     position: relative;
     display: flex;
@@ -218,10 +243,10 @@ textarea.form-control{
 }
 
 .preview{
-    margin-bottom: 3rem;
-    width: 51.5rem;
-    height: 20rem;
-    border-radius: 2rem;
+    margin-bottom: 3vw;
+    width: 48vw;
+    height: 40%;
+    border-radius: 2vw;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -232,11 +257,34 @@ textarea.form-control{
 }
 
 .thumbnail{
-    margin: 2rem;
-    width: 23rem;
-    height: 16rem;
-    border-radius: 1rem;
+    margin: 2vw;
+    width: 25vw;
+    height: 16vw;
+    border-radius: 1vw;
     object-fit: cover;
+}
+
+.intro.dark{
+    top: 5rem;
+    position: relative;
+    margin-left: 0.5vw;
+    padding: 2vw;
+    .title{
+        margin: 0;
+    }
+    .subtitle{
+        margin: 0;
+    }
+}
+
+.wallpaper.post{
+    top: -8rem;
+    .small_icon{
+        margin-top: 2vw;
+        margin-left: 2vw;
+        height: 2.5vw;
+        width: 2.5vw;
+    }
 }
 
 .post{
@@ -248,7 +296,8 @@ textarea.form-control{
 }
 
 .post_holder{
-    width: 75%;
+    top: -3rem;
+    width: 85%;
     border-radius: 3rem;
     position: relative;
     align-items: center;
@@ -256,9 +305,9 @@ textarea.form-control{
 }
 
 .post_content{
-    padding-top: 7rem;
-    padding-bottom: 5rem;
-    width: 80%;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    width: 90%;
     position: relative;
 }
 
@@ -271,14 +320,18 @@ textarea.form-control{
 }
 
 .post_img{
-    margin-right: 3rem;
-    margin-bottom: 1rem;
-    height: 25rem;
-    width: 35rem;
-    border-radius: 3rem;
+    margin-right: 3.5vw;
+    margin-bottom: 2vw;
+    height: 28vw;
+    width: 40vw;
+    border-radius: 3vw;
     object-fit: cover;
     float: left;
 }
+
+.last_link{
+        float: right;
+    }
 
 .profile_pic{
     width: 36vw;
@@ -377,6 +430,16 @@ textarea.form-control{
         width: 6.5vw;
         height: 6.5vw;
     }
+    .wallpaper .small_icon{
+        margin-top: 1vw;
+        margin-left: 2vw;
+        width: 3vw;
+        height: 3vw;
+    }
+    .wallpaper{
+        top: -40vw;
+        height: 160vw;
+    }
     .menu_icon{
         width: 5vw;
         height: 5vw;
@@ -384,6 +447,34 @@ textarea.form-control{
     .content_block{
         height: 65vw;
         top: 20vw;
+    }
+    .form_container{
+        height: 100vw;
+        width: 80%;
+        border-radius: 5%;
+        position: absolute;
+        top: -20vw;
+        input{
+            margin-bottom: 3vw;
+        }
+        textarea{
+            height: 30vw;
+        }
+        .text{
+            text-align: left;            
+        }
+    }
+    .form-control{
+        height: 5vw;
+        width: 70vw;
+    }
+    .sub_button{
+        height: 5vw;
+        width: 15vw;
+    }
+    .text.sub_button{
+        text-align: center;
+        font-size: 2.5vw;
     }
     .navbar{
         height: 15vw;
@@ -439,5 +530,70 @@ textarea.form-control{
         top: 4vw;
         width: 20%;
         margin-right: -70%;
+    }
+    .preview_holder{
+        top: 20vw;
+        .preview{
+            height: 35vw;
+            width: 90%;
+        }
+        .thumbnail{
+            height: 25vw;
+            width: 38vw;
+        }
+        .preview_title{
+            font-size: 4.3vw;
+        }
+        .preview_subtitle{
+            font-size: 3.2vw;
+        }
+        .preview_links{
+            font-size: 2.5vw;
+        }
+    }
+    .intro.dark{
+        top: 20vw;
+        position: relative;
+        a {
+            font-size: 3vw;
+        }
+        .title{
+            font-size: 12vw;
+        }
+        .subtitle{
+            font-size: 7vw;
+        }
+    }
+    .wallpaper.post{
+        top: -28vw;
+        height: 200vw;
+        .small_icon{
+            margin-top: 5vw;
+            margin-left: 2.3vw;
+            width: 3.3vw;
+            height: 3.3vw;
+        }
+    }
+    .post_holder{
+        top: -18vw;
+        width: 88%;
+        border-radius: 5vw;
+        padding-bottom: 5vw;
+        .post_img{
+            float: none;
+            width: 100%;
+            height: 45vw;
+            border-radius: 5vw;
+        }
+        a {
+            font-size: 3vw;
+        }
+        p{
+            text-align: justify;
+            font-size: 3.6vw;
+        }
+        .last_link{
+            font-size: 3.5vw;
+        }
     }
 }

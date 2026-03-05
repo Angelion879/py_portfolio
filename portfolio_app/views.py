@@ -58,9 +58,10 @@ def feed(request):
     return render(request, 'pages/feed.html', context)
 
 def post(request, slug):
+    post_repeat = lambda: list(range(1,500))
     content = Post.objects.get(slug=slug)
 
-    context = {'post':content, 'repeat':wlpp_repeat}
+    context = {'post':content, 'repeat':post_repeat}
     return render(request, 'pages/post.html', context)
 
 # CRUD views
