@@ -186,6 +186,7 @@ button{
 }
 
 input{
+    margin-top: 1.2vw;
     margin-bottom: 1.3vw;
     background-color: #1e2233;
     border: 0;
@@ -198,6 +199,7 @@ input{
 }
 
 textarea.form-control{
+    margin-top: 1.2vw;
     height: 20vw;
     resize: none;
 }
