@@ -165,6 +165,26 @@ button{
     justify-content: center;
 }
 
+.form_container.crud{
+    top: -8vw;
+    height: 70vw;
+    width: 65%;
+    .sub_button{
+        width: 13vw;
+    }
+}
+
+.wallpaper.crud{
+    top: -18vw;
+    height: 90vw;
+    .small_icon{
+        margin-top: 2vw;
+        margin-left: 2vw;
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+}
+
 input{
     margin-bottom: 1.3vw;
     background-color: #1e2233;

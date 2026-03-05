@@ -16,13 +16,13 @@
 <div class="intro dark">
     <h3 class="title">New Post</h3>
 </div>
-<div class="post" style="top: 10rem;">
-    <div class="wallpaper">
+<div class="post">
+    <div class="wallpaper crud">
         {% for i in repeat %}
             {% include 'icons.html' %}
         {% endfor %}
     </div>
-    <div class="form_container light">
+    <div class="form_container light crud">
         <form class="text" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{form|crispy}}
