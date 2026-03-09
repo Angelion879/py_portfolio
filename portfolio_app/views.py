@@ -50,9 +50,9 @@ def feed(request):
     user_lang = get_language()
     print(user_lang)
     if str(user_lang) == 'pt':
-        posts = Post.objects.filter(language='pt', active=True)
+        posts = Post.objects.filter(language='pt', active=True).order_by('-fixed','-updated_date')
     else:
-        posts = Post.objects.filter(language='en', active=True)
+        posts = Post.objects.filter(language='en', active=True).order_by('-fixed','-updated_date')
 
     context = {'posts':posts}
     return render(request, 'pages/feed.html', context)

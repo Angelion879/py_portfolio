@@ -167,7 +167,7 @@ button{
 
 .form_container.crud{
     top: -3rem;
-    height: 70vw;
+    height: 80vw;
     width: 65%;
     .sub_button{
         width: 13vw;
@@ -331,6 +331,10 @@ textarea.form-control{
 
 .last_link{
         float: right;
+    }
+
+.repo_link{
+        float: left;
     }
 
 .profile_pic{
@@ -593,6 +597,9 @@ textarea.form-control{
             font-size: 3.6vw;
         }
         .last_link{
+            font-size: 3.5vw;
+        }
+        .repo_link{
             font-size: 3.5vw;
         }
     }
