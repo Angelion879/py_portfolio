@@ -28,7 +28,7 @@
     </div>
     <div class="post_holder light">
         <div class="post_content">
-            <img class="post_img" src="{{post.thumbnail.url}}">
+            <img class="post_img" src="{{post.get_thumbnail_url}}">
             <p class="text">{{post.body|safe|linebreaksbr}}</p>
             <a href="{{post.repo_link}}" class="preview_links highlights repo_link">{% trans "Visit Repo" %}</a>
             <a href="{% url 'feed' %}" class="preview_links highlights last_link">{% trans "Back to Projects" %}</a>
