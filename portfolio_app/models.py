@@ -15,6 +15,7 @@ class Post(models.Model):
         null=True, blank=True, upload_to="post_img",
         default="placeholder.png")
     body = models.TextField(null=True, blank=True)
+    repo_link = models.CharField(max_length=250,null=True, blank=True)
     active = models.BooleanField(default=False)
     language = models.ForeignKey(Language, on_delete=models.CASCADE, null=True)
     slug = models.SlugField(null=True, blank=True)
