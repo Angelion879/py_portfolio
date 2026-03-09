@@ -1,6 +1,5 @@
 from django.db import models
 from django.utils.text import slugify
-from django.utils import timezone
 
 # Create your models here.
 class Language(models.Model):
@@ -9,12 +8,17 @@ class Language(models.Model):
     def __str__(self):
         return str(self.code)
 
+class Thumbnail(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to="post_img")
+
+    def __str__(self):
+        return str(self.name)
+
 class Post(models.Model):
     title = models.CharField(max_length=200)
     sub_title = models.CharField(max_length=200, null=True, blank=True)
-    thumbnail = models.ImageField(
-        null=True, blank=True, upload_to="post_img",
-        default="placeholder.png")
+    thumbnail = models.ForeignKey(Thumbnail, on_delete=models.SET_NULL, null=True, blank=True)
     body = models.TextField(null=True, blank=True)
     repo_link = models.CharField(max_length=250,null=True, blank=True)
     active = models.BooleanField(default=False)
@@ -41,3 +45,10 @@ class Post(models.Model):
             self.slug = slug
 
         super().save(*args, **kwargs)
+
+    @property
+    def get_thumbnail_url(self):
+        if self.thumbnail and self.thumbnail.image:
+            return self.thumbnail.image.url
+        
+        return '/static/images/placeholder.png'
