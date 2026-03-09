@@ -51,4 +51,4 @@ class Post(models.Model):
         if self.thumbnail and self.thumbnail.image:
             return self.thumbnail.image.url
         
-        return 'placeholder.png'
+        return '/static/images/placeholder.png'
